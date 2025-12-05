@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Dose </title>
+    <link rel="stylesheet" href="external.css" />
+</head>
+<body>
+    <!-- for header -->
+    <header>
+        <h1 class="logo">Coffee Dose - Your Daily Dose of Good Coffee</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- for menu -->
+    <div class="container-fluid pt-5">
+        <div class="greybox container">
+            <div class="section-title">
+                <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Brewed with Love</h4>
+                <h1 class="display-4">Explore Our Coffee Menu</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 class="mb-5">Hot Coffee</h1>
+
+                    <div class="row align-items-center mb-5">
+                        <div class="col-4 col-sm-3">
+                            <img class="w-100 rounded-circle mb-3 mb-sm-0" src="images/menu-1.jpg" alt="" onclick="orderCoffee('Hot Americano', '5', 'images/menu-1.jpg','Espresso shots are topped with hot water to produce a light layer of crema.')">
+                            <h5 class="menu-price">$5</h5>
+                        </div>
+                        <div class="col-8 col-sm-9">
+                            <h4>Hot Americano</h4>
+                            <p class="m-0">Espresso shots are topped with hot water to produce a light layer of crema.</p>
+                        </div>
+                    </div>
+                    <div class="row align-items-center mb-5">
+                        <div class="col-4 col-sm-3">
+                            <img class="w-100 rounded-circle mb-3 mb-sm-0" src="images/menu-2.jpg" alt="" onclick="orderCoffee('Hot Cappuccino', '7', 'images/menu-2.jpg','Dark, rich espresso combined with steamed milk, topped with a deep layer of foam.')">
+                            <h5 class="menu-price">$7</h5>
+                        </div>
+                        <div class="col-8 col-sm-9">
+                            <h4>Hot Cappuccino</h4>
+                            <p class="m-0">Dark, rich espresso combined with steamed milk, topped with a deep layer of foam.</p>
+                        </div>
+                    </div>
+                    <div class="row align-items-center mb-5">
+                        <div class="col-4 col-sm-3">
+                            <img class="w-100 rounded-circle mb-3 mb-sm-0" src="images/menu-3.jpg" alt="" onclick="orderCoffee('Hot Latte', '9', 'images/menu-3.jpg','Our dark, rich espresso is balanced with steamed milk and topped with a light layer of foam. A perfect milk-forward warm up.')">
+                            <h5 class="menu-price">$9</h5>
+                        </div>
+                        <div class="col-8 col-sm-9">
+                            <h4>Hot Latte</h4>
+                            <p class="m-0">
+                                Our dark, rich espresso is balanced with steamed milk and topped with a light layer of foam. A perfect milk-forward warm up.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row align-items-center mb-5">
+                        <div class="col-4 col-sm-3">
+                            <img class="w-100 rounded-circle mb-3 mb-sm-0" src="images/Drip Coffee small.jpg" alt="" onclick="orderCoffee('Drip Coffee', '8', 'images/Drip Coffee small.jpg','Classic brewed coffee with a clean, smooth, everyday taste.')">
+                            <h5 class="menu-price">$8</h5>
+                        </div>
+                        <div class="col-8 col-sm-9">
+                            <h4>Drip Coffee</h4>
+                            <p class="m-0">
+                                Classic brewed coffee with a clean, smooth, everyday taste.
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row align-items-center mb-5">
+                        <div class="col-4 col-sm-3">
+                            <img class="w-100 rounded-circle mb-3 mb-sm-0" src="images/chai latte small.jpg" alt="" onclick="orderCoffee('Chai Latte', '8', 'images/Drip Coffee small.jpg','Spiced black tea blended with steamed milk to create a warm, aromatic drink.')">
+                            <h5 class="menu-price">$8</h5>
+                        </div>
+                        <div class="col-8 col-sm-9">
+                            <h4>Chai Latte</h4>
+                            <p class="m-0">
+                                Spiced black tea blended with steamed milk to create a warm, aromatic drink.
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row align-items-center mb-5">
+                        <div class="col-4 col-sm-3">
+                            <img class="w-100 rounded-circle mb-3 mb-sm-0" src="images/matcha latte small.jpg" alt="" onclick="orderCoffee('Matcha Latte', '7', 'images/matcha latte small.jpg','Smooth green tea powder mixed with steamed milk for a mellow, creamy taste.')">
+                            <h5 class="menu-price">$7</h5>
+                        </div>
+                        <div class="col-8 col-sm-9">
+                            <h4>Matcha Latte</h4>
+                            <p class="m-0">
+                                Smooth green tea powder mixed with steamed milk for a mellow, creamy taste.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-6">
+                    <h1 class="mb-5">Cold Coffee</h1>
+                    <div class="row align-items-center mb-5">
+                        <div class="col-4 col-sm-3">
+                            <img class="w-100 rounded-circle mb-3 mb-sm-0" src="images/Iced Americano small.jpg" alt="" onclick="orderCoffee('Iced Americano', '5', 'images/Iced Americano small.jpg','Espresso shots are topped with water to produce a light layer of crema, then served over ice. The result is this wonderfully rich cup with depth and nuance.')">
+                            <h5 class="menu-price">$5</h5>
+                        </div>
+                        <div class="col-8 col-sm-9">
+                            <h4>Iced Americano</h4>
+                            <p class="m-0">Espresso shots are topped with water to produce a light layer of crema, then served over ice. The result is this wonderfully rich cup with depth and nuance.</p>
+                        </div>
+                    </div>
+                    <div class="row align-items-center mb-5">
+                        <div class="col-4 col-sm-3">
+                            <img class="w-100 rounded-circle mb-3 mb-sm-0" src="images/cortado.jpg" alt="" onclick="orderCoffee('Iced Cappuccino', '7', 'images/cortado.jpg','Cold milk foam topped with a slightly sweetened espresso coffee of choice for a deliciously refreshing twist on your favourite drink.')">
+                            <h5 class="menu-price">$7</h5>
+                        </div>
+                        <div class="col-8 col-sm-9">
+                            <h4>Iced Cappuccino</h4>
+                            <p class="m-0">Cold milk foam topped with a slightly sweetened espresso coffee of choice for a deliciously refreshing twist on your favourite drink.</p>
+                        </div>
+                    </div>
+                    <div class="row align-items-center mb-5">
+                        <div class="col-4 col-sm-3">
+                            <img class="w-100 rounded-circle mb-3 mb-sm-0" src="images/Iced Latte small.jpg" alt="" onclick="orderCoffee('Iced Latte', '9', 'images/Iced Latte small.jpg','Our dark, rich espresso is combined with milk and served over ice. A perfect milk-forward cool down.')">
+                            <h5 class="menu-price">$9</h5>
+                        </div>
+                        <div class="col-8 col-sm-9">
+                            <h4>Iced Latte</h4>
+                            <p class="m-0">Our dark, rich espresso is combined with milk and served over ice. A perfect milk-forward cool down.</p>
+                        </div>
+                    </div>
+                    <div class="row align-items-center mb-5">
+                        <div class="col-4 col-sm-3">
+                            <img class="w-100 rounded-circle mb-3 mb-sm-0" src="images/frappe.png" alt="" onclick="orderCoffee('Frappe', '9', 'images/frappe.png','A blended iced coffee drink that’s cold, frothy, and refreshing.')">
+                            <h5 class="menu-price">$9</h5>
+                        </div>
+                        <div class="col-8 col-sm-9">
+                            <h4>Frappe</h4>
+                            <p class="m-0">
+                                A blended iced coffee drink that’s cold, frothy, and refreshing.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row align-items-center mb-5">
+                        <div class="col-4 col-sm-3">
+                            <img class="w-100 rounded-circle mb-3 mb-sm-0" src="images/coffeeimages/AffogatoSmall.jpg" alt="" onclick="orderCoffee('Affogato', '9', 'images/coffeeimages/AffogatoSmall.jpg','A scoop of vanilla ice cream topped with a hot shot of espresso.')">
+                            <h5 class="menu-price">$9</h5>
+                        </div>
+                        <div class="col-8 col-sm-9">
+                            <h4>Affogato</h4>
+                            <p class="m-0">
+                                A scoop of vanilla ice cream topped with a hot shot of espresso.
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row align-items-center mb-5">
+                        <div class="col-4 col-sm-3">
+                            <img class="w-100 rounded-circle mb-3 mb-sm-0" src="images/Cold brew coffee small.jpg" alt="" onclick="orderCoffee('Cold Brew', '7', 'images/Cold brew coffee small.jpg','Coffee slowly steeped in cold water for a naturally sweet, smooth flavor.')">
+                            <h5 class="menu-price">$7</h5>
+                        </div>
+                        <div class="col-8 col-sm-9">
+                            <h4>Cold Brew</h4>
+                            <p class="m-0">
+                                Coffee slowly steeped in cold water for a naturally sweet, smooth flavor.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- for footer -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+
+                <!-- Site Map -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <h4>Site Map</h4>
+                    <ul class="site-map">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="#">Our Drinks</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Get In Touch -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <h3>Get In Touch</h3>
+                    <p class="p_footer">123 Street, Dublin, Ireland.</p>
+                    <p class="p_footer">+353 345 67890</p>
+                    <p class="p_footer">coffeedose@gmail.com</p>
+
+                    <h4 style="margin-top: 20px;">Download Our App</h4>
+                    <div class="download-buttons">
+                        <a href="#" class="store-btn">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                                 alt="Google Play">
+                        </a>
+
+                    </div>
+                </div>
+
+                <!-- Open Hours -->
+                <div class="col-lg-4 col-md-12 col-sm-12 mb-4">
+                    <h3>Open Hours</h3>
+                    <h5>Monday - Friday</h5>
+                    <p class="p_footer">8.00 AM - 8.00 PM</p>
+
+                    <h5>Saturday - Sunday</h5>
+                    <p class="p_footer">2.00 PM - 8.00 PM</p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

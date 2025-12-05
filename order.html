@@ -1,0 +1,292 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Coffee</title>
+    <link rel="stylesheet" href="external.css">
+
+    <style>
+        .order-container {
+            display: flex;
+            gap: 40px;
+            margin-top: 40px;
+            align-items: flex-start;
+        }
+
+        .order-left img {
+            width: 320px;
+            border-radius: 15px;
+            box-shadow: 0px 5px 20px rgba(0,0,0,0.15);
+        }
+
+        .order-right {
+            flex: 1;
+        }
+
+            .order-right h2 {
+                color: var(--brown);
+                margin-bottom: 10px;
+            }
+        .order-details {
+            flex: 1;
+        }
+
+        .coffee-desc {
+            margin-bottom: 10px;
+            color: var(--brown);
+        }
+
+        .price {
+            color: var(--brown);
+            margin-bottom: 25px;
+        }
+
+        .option-block {
+            margin-bottom: 20px;
+        }
+
+        .radio-row {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+            .radio-row input {
+                display: none;
+            }
+
+            .radio-row label {
+                padding: 6px 14px;
+                background: var(--lightBrown);
+                border-radius: 50px;
+                cursor: pointer;
+                transition: 0.2s;
+            }
+
+            .radio-row input:checked + label {
+                background: var(--brown);
+                color: white;
+            }
+
+        .checkbox-row {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .qty-controls {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+            .qty-controls button {
+                padding: 6px 12px;
+                background: var(--brown);
+                color: white;
+                border: none;
+                border-radius: 6px;
+                cursor: pointer;
+            }
+
+        
+    </style>
+</head>
+
+<body>
+    <!-- for header -->
+    <header>
+        <h1 class="logo">Coffee Dose - Your Daily Dose of Good Coffee</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container greybox">
+
+        <h1 style="text-align:center; color:var(--brown);">Order Details</h1>
+
+        <div class="order-container">
+
+            <!-- LEFT: IMAGE -->
+            <div class="order-left">
+                <img id="coffeeImage" src="" alt="Coffee Image">
+            </div>
+
+            <!-- RIGHT: DETAILS -->
+            <div class="order-box">
+
+                <h2 id="coffeeName"></h2>
+                <p id="coffeePrice" style="font-size:18px; font-weight:bold;"></p>
+                <p id="coffeeDesc" style="font-size:15px; font-weight:bold;"></p>
+                <div class="option-block">
+                    <label>Size</label>
+                    <div class="radio-row">
+                        <input type="radio" id="small" name="size" value="4.50" checked>
+                        <label for="small">Small</label>
+
+
+                        <input type="radio" id="medium" name="size" value="5.50">
+                        <label for="medium">Medium</label>
+
+
+                        <input type="radio" id="large" name="size" value="6.50">
+                        <label for="large">Large</label>
+                    </div>
+                </div>
+
+
+                <div class="option-block">
+                    <label>Sugar Level</label>
+                    <div class="radio-row">
+                        <input type="radio" id="s0" name="sugar" value="0" checked>
+                        <label for="s0">0%</label>
+                        <input type="radio" id="s25" name="sugar" value="0">
+                        <label for="s25">25%</label>
+                        <input type="radio" id="s50" name="sugar" value="0">
+                        <label for="s50">50%</label>
+                        <input type="radio" id="s75" name="sugar" value="0">
+                        <label for="s75">75%</label>
+                        <input type="radio" id="s100" name="sugar" value="0">
+                        <label for="s100">100%</label>
+                    </div>
+                </div>
+
+
+                <div class="option-block">
+                    <label>Roast Level</label>
+                    <div class="radio-row">
+                        <input type="radio" id="light" name="roast" value="0" checked>
+                        <label for="light">Light</label>
+                        <input type="radio" id="mediumr" name="roast" value="0">
+                        <label for="mediumr">Medium</label>
+                        <input type="radio" id="dark" name="roast" value="0">
+                        <label for="dark">Dark</label>
+                    </div>
+                </div>
+
+
+                <div class="option-block">
+                    <label>Toppings (+ €0.50 each)</label>
+                    <div class="checkbox-row">
+                        <label><input type="checkbox" class="top" value="0.5"> Whipped Cream</label>
+                        <label><input type="checkbox" class="top" value="0.5"> Cinnamon</label>
+                        <label><input type="checkbox" class="top" value="0.5"> Chocolate</label>
+                        <label><input type="checkbox" class="top" value="0.5"> Caramel</label>
+                    </div>
+                </div>
+
+
+                <div class="qty-block">
+                    <label>Quantity</label>
+                    <div class="qty-controls">
+                        <button onclick="changeQty(-1)">−</button>
+                        <span id="qty">1</span>
+                        <button onclick="changeQty(1)">+</button>
+                    </div>
+                </div>
+
+                <button class="btn-primarybtn" id="confirmOrderBtn" onclick="placeOrder()" style="margin-top:20px;">Place Order</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- for footer -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+
+                <!-- Site Map -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <h4>Site Map</h4>
+                    <ul class="site-map">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="#">Our Drinks</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Get In Touch -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <h3>Get In Touch</h3>
+                    <p class="p_footer">123 Street, Dublin, Ireland.</p>
+                    <p class="p_footer">+353 345 67890</p>
+                    <p class="p_footer">coffeedose@gmail.com</p>
+
+                    <h4 style="margin-top: 20px;">Download Our App</h4>
+                    <div class="download-buttons">
+                        <a href="#" class="store-btn">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                                 alt="Google Play">
+                        </a>
+
+                    </div>
+                </div>
+
+                <!-- Open Hours -->
+                <div class="col-lg-4 col-md-12 col-sm-12 mb-4">
+                    <h3>Open Hours</h3>
+                    <h5>Monday - Friday</h5>
+                    <p class="p_footer">8.00 AM - 8.00 PM</p>
+
+                    <h5>Saturday - Sunday</h5>
+                    <p class="p_footer">2.00 PM - 8.00 PM</p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Get values from URL
+        const params = new URLSearchParams(window.location.search);
+        const name = params.get("name");
+        const price = params.get("price");
+        const image = params.get("image");
+        const desc = params.get("desc");
+
+        // Insert into the page
+        document.getElementById("coffeeName").textContent = name;
+        document.getElementById("coffeePrice").textContent = "€" + price;
+        document.getElementById("coffeeImage").src = image;
+        document.getElementById("coffeeDesc").textContent = desc;
+
+
+        function updatePrice() {
+            let basePrice = parseFloat(document.querySelector("input[name='size']:checked").value);
+            let toppings = document.querySelectorAll(".top:checked").length * 0.5;
+            let qty = parseInt(document.getElementById("qty").innerText);
+            let total = (basePrice + toppings) * qty;
+            document.getElementById("coffeePrice").innerText = total.toFixed(2);
+        }
+
+
+        document.querySelectorAll("input").forEach(el => {
+            el.addEventListener("change", updatePrice);
+        });
+
+
+        function changeQty(num) {
+            let qty = parseInt(document.getElementById("qty").innerText);
+            qty = Math.max(1, qty + num);
+            document.getElementById("qty").innerText = qty;
+            updatePrice();
+        }
+
+        function placeOrder() {
+            alert('Please pick up your order in 10 minutes.');
+        }
+    </script>
+
+
+</body>
+</html>

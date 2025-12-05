@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Dose </title>
+    <link rel="stylesheet" href="external.css">
+    <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+    <!-- for header -->
+    <header>
+        <h1 class="logo">Coffee Dose - Your Daily Dose of Good Coffee</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="register.html">Sign Up</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="login-wrapper container greybox">
+        <div class="login-box row col-md-12">
+
+            <!-- LEFT IMAGE -->
+            <div class="col-md-6 image-area">
+                <img src="images/service-1.jpg" alt="Login Image">
+            </div>
+
+            <!-- RIGHT LOGIN FORM -->
+            <div class="col-md-6 form-area">
+                <h2>Sign Up</h2>
+
+                <form id="registerForm" novalidate>
+
+                    <!-- FIRST NAME -->
+                    <div class="mb-3">
+                        <label>First Name</label>
+                        <input type="text" id="firstName" class="form-control">
+                        <div class="invalid-feedback">First name is required</div>
+                    </div>
+
+                    <!-- LAST NAME -->
+                    <div class="mb-3">
+                        <label>Last Name</label>
+                        <input type="text" id="lastName" class="form-control">
+                        <div class="invalid-feedback">Last name is required</div>
+                    </div>
+
+                    <!-- EMAIL -->
+                    <div class="mb-3">
+                        <label>Email</label>
+                        <input type="email" id="email" class="form-control">
+                        <div class="invalid-feedback">Enter a valid email</div>
+                    </div>
+
+                    <!-- PHONE -->
+                    <div class="mb-3">
+                        <label>Phone</label>
+                        <input type="text" id="phone" class="form-control">
+                        <div class="invalid-feedback">Phone must be at least 7 digits</div>
+                    </div>
+
+                    <!-- PASSWORD -->
+                    <div class="mb-3">
+                        <label>Password</label>
+                        <input type="password" id="password" class="form-control">
+                        <div class="invalid-feedback">Password must be 6 characters or more</div>
+                    </div>
+
+                    <!-- BIRTH MONTH -->
+                    <div class=" row mb-3">
+                        <div class="col-md-6">
+                            <label>Birth Month</label>
+                            <select id="birthMonth" class="form-control">
+                                <option value="">Month</option>
+                                <option>January</option>
+                                <option>February</option>
+                                <option>March</option>
+                                <option>April</option>
+                                <option>May</option>
+                                <option>June</option>
+                                <option>July</option>
+                                <option>August</option>
+                                <option>September</option>
+                                <option>October</option>
+                                <option>November</option>
+                                <option>December</option>
+                            </select>
+                            <div class="invalid-feedback">Select a birth month</div>
+                        </div>
+                        <div class="col-md-6">
+                            <label>Birth Day</label>
+                            <select id="birthDay" class="form-control">
+                                <option value="">Day</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                                <option>13</option>
+                                <option>14</option>
+                                <option>15</option>
+                                <option>16</option>
+                                <option>17</option>
+                                <option>18</option>
+                                <option>19</option>
+                                <option>20</option>
+                                <option>21</option>
+                                <option>22</option>
+                                <option>23</option>
+                                <option>24</option>
+                                <option>25</option>
+                                <option>26</option>
+                                <option>27</option>
+                                <option>28</option>
+                                <option>29</option>
+                                <option>30</option>
+                                <option>31</option>
+
+                            </select>
+                            <div class="invalid-feedback">Select a birth day</div>
+                        </div>                     
+                      
+                    </div>
+
+                    <!-- BIRTH YEAR -->
+                    <!--<div class="mb-3">
+                        <label>Birth Day</label>
+                        <select id="birthYear" class="form-control">
+                            <option value="">Select year</option>
+                            @{
+                            for (var i = 1; i <= 31; i++)
+                            {
+                            <option value="@i">i</option>
+                            }
+                            }
+                        </select>
+                        <div class="invalid-feedback">Select a birth year</div>
+                    </div>-->
+
+                    <!-- REFER CODE -->
+                    <div class="mb-3">
+                        <label>Referral Code (Optional)</label>
+                        <input type="text" id="referCode" class="form-control">
+                    </div>
+
+                    <!-- TERMS & CONDITIONS -->
+                    <div class="row mb-3 form-check">
+                        <div class="col-md-1">
+                            <input type="checkbox" id="agree" class="form-check-input">
+                        </div>
+                        <div class="col-md-9">
+                            <label class="form-check-label">I agree to the Terms & Conditions</label>
+                            <div class="invalid-feedback">You must agree before signing up</div>
+                        </div>                      
+                        
+                    </div>
+
+                    <!-- SIGN UP BUTTON -->
+                    <button class="btn-primarybtn">Sign Up</button>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- for footer -->
+    <footer class="footer-section">
+        <div class="container greybox">
+            <div class="row">
+
+                <!-- Site Map -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <h4>Site Map</h4>
+                    <ul class="site-map">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="#">Our Drinks</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Get In Touch -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <h3>Get In Touch</h3>
+                    <p class="p_footer">123 Street, Dublin, Ireland.</p>
+                    <p class="p_footer">+353 345 67890</p>
+                    <p class="p_footer">coffeedose@gmail.com</p>
+
+                    <h4 style="margin-top: 20px;">Download Our App</h4>
+                    <div class="download-buttons">
+                        <a href="#" class="store-btn">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                                 alt="Google Play">
+                        </a>
+
+                    </div>
+                </div>
+
+                <!-- Open Hours -->
+                <div class="col-lg-4 col-md-12 col-sm-12 mb-4">
+                    <h3>Open Hours</h3>
+                    <h5>Monday - Friday</h5>
+                    <p class="p_footer">8.00 AM - 8.00 PM</p>
+
+                    <h5>Saturday - Sunday</h5>
+                    <p class="p_footer">2.00 PM - 8.00 PM</p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <script src="login.js"></script>
+</body>
+</html>
+
+

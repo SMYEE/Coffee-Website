@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Dose </title>
+    <link rel="stylesheet" href="external.css">
+    <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+    <!-- for header -->
+    <header>
+        <h1 class="logo">Coffee Dose - Your Daily Dose of Good Coffee</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="login-wrapper container greybox">
+        <div class="login-box row col-md-12">
+
+            <!-- LEFT IMAGE -->
+            <div class="col-md-6 image-area">
+                <img src="images/about.png" alt="Login Image">
+            </div>
+
+            <!-- RIGHT LOGIN FORM -->
+            <div class="col-md-6 form-area">
+                <h2>Login</h2>
+
+                <form id="loginForm" novalidate>
+                    <div class="mb-3">
+                        <label>Username</label>
+                        <input type="text" class="form-control" id="username">
+                        <div class="invalid-feedback">Username is required</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Password</label>
+                        <input type="password" class="form-control" id="password">
+                        <div class="invalid-feedback">Password is required</div>
+                    </div>
+
+                    <button class="btn-primarybtn">Login</button>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- for footer -->
+    <footer class="footer-section">
+        <div class="container greybox">
+            <div class="row">
+
+                <!-- Site Map -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <h4>Site Map</h4>
+                    <ul class="site-map">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="#">Our Drinks</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Get In Touch -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <h3>Get In Touch</h3>
+                    <p class="p_footer">123 Street, Dublin, Ireland.</p>
+                    <p class="p_footer">+353 345 67890</p>
+                    <p class="p_footer">coffeedose@gmail.com</p>
+
+                    <h4 style="margin-top: 20px;">Download Our App</h4>
+                    <div class="download-buttons">
+                        <a href="#" class="store-btn">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                                 alt="Google Play">
+                        </a>
+
+                    </div>
+                </div>
+
+                <!-- Open Hours -->
+                <div class="col-lg-4 col-md-12 col-sm-12 mb-4">
+                    <h3>Open Hours</h3>
+                    <h5>Monday - Friday</h5>
+                    <p class="p_footer">8.00 AM - 8.00 PM</p>
+
+                    <h5>Saturday - Sunday</h5>
+                    <p class="p_footer">2.00 PM - 8.00 PM</p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <script src="login.js"></script>
+</body>
+</html>
+
+

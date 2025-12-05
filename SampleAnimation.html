@@ -1,0 +1,110 @@
+﻿import { motion } from "framer-motion";
+
+export default function VintageCoffeeShop() {
+  return (
+<div className="min-h-screen bg-[#f7f2e8] text-[#4b2e19] font-serif">
+    {/* HERO SECTION */}
+    <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93"
+             className="absolute inset-0 w-full h-full object-cover opacity-60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/10"></div>
+
+        <motion.div initial={{ opacity: 0, y: 40 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1.2 }}
+                    className="z-10 text-center">
+            <h1 className="text-6xl font-bold tracking-wide text-white drop-shadow-lg">
+                The Old Mill Coffee
+            </h1>
+            <p className="text-xl mt-4 text-[#f8e9cf] italic">
+                Crafted With Tradition. Served With Heart.
+            </p>
+            <motion.button whileHover={{ scale: 1.1 }}
+                           whileTap={{ scale: 0.95 }}
+                           className="mt-8 px-8 py-3 bg-[#4b2e19] text-[#f7f2e8] rounded-xl shadow-lg">
+                Explore Menu
+            </motion.button>
+        </motion.div>
+    </section>
+
+    {/* ABOUT SECTION */}
+    <section className="py-20 px-8 md:px-20">
+        <motion.h2 initial={{ opacity: 0, y: 30 }}
+                   whileInView={{ opacity: 1, y: 0 }}
+                   transition={{ duration: 0.8 }}
+                   className="text-4xl font-bold mb-6 text-center">
+            Our Coffee Heritage
+        </motion.h2>
+
+        <motion.p initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 1 }}
+                  className="max-w-3xl mx-auto text-lg leading-relaxed text-center">
+            Step inside our vintage-inspired café where every cup is brewed using old-world methods
+            and crafted with genuine care. With warm wooden interiors and the aroma of freshly roasted
+            beans, we bring back the charm of traditional coffee houses.
+        </motion.p>
+    </section>
+
+    {/* MENU SECTION */}
+    <section className="py-20 bg-[#efe6d9] px-10 md:px-20">
+        <motion.h2 initial={{ opacity: 0, y: 40 }}
+                   whileInView={{ opacity: 1, y: 0 }}
+                   transition={{ duration: 1 }}
+                   className="text-4xl font-bold text-center mb-10">
+            Classic Brews & Timeless Treats
+        </motion.h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+            {["Espresso", "Cappuccino", "Vintage Brew"].map((item, index) => (
+            <motion.div key={index}
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: index * 0.2 }}
+                        className="p-8 bg-[#f7f2e8] rounded-2xl shadow-md text-center">
+                <h3 className="text-2xl font-bold mb-3">{item}</h3>
+                <p className="text-md italic">Smooth • Rich • Authentic</p>
+            </motion.div>
+            ))}
+        </div>
+    </section>
+
+    {/* GALLERY SECTION */}
+    <section className="py-20 px-8 md:px-20">
+        <motion.h2 initial={{ opacity: 0 }}
+                   whileInView={{ opacity: 1 }}
+                   className="text-4xl font-bold text-center mb-12">
+            Vintage Café Moments
+        </motion.h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[1, 2, 3].map((i) => (
+            <motion.img key={i}
+                        initial={{ scale: 0.9, opacity: 0 }}
+                        whileInView={{ scale: 1, opacity: 1 }}
+                        transition={{ duration: 0.8 }}
+                        src={`https://images.unsplash.com/photo-15${i}042239860-f550ce710b93`}
+                        className="w-full h-64 object-cover rounded-xl shadow-lg" />
+            ))}
+        </div>
+    </section>
+
+    {/* CONTACT SECTION */}
+    <section className="py-20 bg-[#efe6d9] px-12 md:px-20 text-center">
+        <motion.h2 initial={{ opacity: 0, y: 30 }}
+                   whileInView={{ opacity: 1, y: 0 }}
+                   transition={{ duration: 1 }}
+                   className="text-4xl font-bold mb-6">
+            Come Visit Us
+        </motion.h2>
+        <motion.p initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 1 }}
+                  className="text-lg max-w-2xl mx-auto">
+            Located in the heart of the old town, our café welcomes you with vintage charm and
+            freshly brewed coffee every day.
+        </motion.p>
+    </section>
+</div>
+  );
+}

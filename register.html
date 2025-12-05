@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Dose </title>
+    <link rel="stylesheet" href="external.css" />
+</head>
+<body>
+    <!-- for header -->
+    <header>
+        <h1 class="logo">Coffee Dose - Your Daily Dose of Good Coffee</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container-fluid pt-5">
+        <div class="greybox container">
+            <div class="section-title">
+                <h1 class="display-4">Register</h1>
+            </div>
+            <div class="row">
+                <div class="container">
+                    <div class="greybox" role="region" aria-label="Account forms">
+
+                        <h2 style="text-align:center; color:var(--brown);">Account Access</h2>
+
+                        <!-- Toggle Buttons (type="button" prevents accidental submit) -->
+                        <div class="tab-buttons" role="tablist" aria-label="Login and Sign up tabs">
+                            <button id="tabLogin" type="button" class="btn active" aria-controls="loginForm" role="tab">Login</button>
+                            <button id="tabSignup" type="button" class="btn" aria-controls="signupForm" role="tab">Sign Up</button>
+                        </div>
+
+                        <!-- LOGIN FORM -->
+                        <form id="loginForm" novalidate>
+                            <h3 class="form-head" style="color:var(--brown);">Login</h3>
+
+                            <label for="loginEmail">Email</label>
+                            <input type="email" id="loginEmail" name="loginEmail" placeholder="Enter email" autocomplete="username">
+
+                            <label for="loginPassword">Password</label>
+                            <input type="password" id="loginPassword" name="loginPassword" placeholder="Enter password" autocomplete="current-password">
+
+                            <p id="loginError" class="message" aria-live="polite" style="color:red;"></p>
+                            <p id="loginSuccess" class="message success" aria-live="polite" style="display:none;"></p>
+
+                            <button class="btn-primarybtn" type="submit">Login</button>
+                        </form>
+
+                        <!-- SIGNUP FORM -->
+                        <form id="signupForm" style="display:none;" novalidate>
+                            <h3 class="form-head" style="color:var(--brown);">Create Account</h3>
+
+                            <label for="signupName">Full Name</label>
+                            <input type="text" id="signupName" name="signupName" placeholder="Enter your full name" autocomplete="name">
+
+                            <label for="signupEmail">Email</label>
+                            <input type="email" id="signupEmail" name="signupEmail" placeholder="Enter email" autocomplete="email">
+
+                            <label for="signupPassword">Password</label>
+                            <input type="password" id="signupPassword" name="signupPassword" placeholder="Create password" autocomplete="new-password">
+
+                            <label for="signupConfirmPassword">Confirm Password</label>
+                            <input type="password" id="signupConfirmPassword" name="signupConfirmPassword" placeholder="Confirm password" autocomplete="new-password">
+
+                            <p id="signupError" class="message" aria-live="polite" style="color:red;"></p>
+                            <p id="signupSuccess" class="message success" aria-live="polite" style="display:none;"></p>
+
+                            <button class="btn-primarybtn" type="submit">Sign Up</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+    </div>
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>
