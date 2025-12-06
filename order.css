@@ -93,7 +93,7 @@
 
     /* Page container */
     .order-container {
-        flex-direction: column;
+        flex-direction: row;
         gap: 20px;
         padding: 0 10px;
     }
@@ -207,3 +207,4 @@
         max-width: 350px;
     }
 }
+
