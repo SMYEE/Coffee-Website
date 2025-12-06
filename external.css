@@ -1,4 +1,4 @@
-﻿:root {
+:root {
     --brown: #493628;
     --lightBrown: #AB886D;
     --beige: #D6C0B3;
@@ -153,11 +153,7 @@ header {
 p_footer {
     color: var(--brown);
 }
-/*p {
-    font-size: 0.9rem;
-    align-items: center;
-    padding: 20px 10px;
-}*/
+
 /* for menu list in header */
 nav ul {
     list-style: none;
@@ -258,67 +254,6 @@ nav ul {
     padding: 30px 20px;
 }
 
-/* for destinations */
-.destinations {
-    text-align: center;
-    /*    padding: 20px 10px;
-*/
-}
-
-.destinations-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-/* for destination cards */
-.cards {
-    display: grid;
-    gap: 20px;
-    margin-top: 30px;
-    grid-template-columns: repeat(4, 1fr);
-}
-
-.card {
-    background: linear-gradient(180deg, var(--lightBrown), var(--beige));
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-    .card img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-    }
-
-    .card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 12px 24px rgba(0,0,0,0.2);
-    }
-
-/* for footer */
-/*footer {
-    background: var(--brown);
-    color: var(--grey);
-    text-align: center;
-    padding: 1rem;
-    margin-top: 30px;
-}*/
-
-/* for contact page */
-.contacts {
-    background-color: #C7B7A3;
-    width: 90%;
-    max-width: 600px;
-    margin: 80px auto;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-
 form {
     display: flex;
     flex-direction: column;
@@ -329,124 +264,150 @@ label {
     font-weight: 600;
 }
 
-input, textarea {
-    background-color: #E8D8C4;
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    font-size: 1rem;
-    outline: none;
-    transition: border-color 0.3s;
-}
 
-    input:focus, textarea:focus {
-        border-color: #561C24;
-    }
 
-textarea {
-    resize: none;
-    height: 120px;
-}
 
-select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #E8D8C4;
-    font-size: 16px;
-    color: #333;
-    cursor: pointer;
-    transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-    select:hover,
-    select:focus {
-        border-color: #561C24;
-        box-shadow: 0 0 5px rgba(0, 119, 182, 0.4);
-        outline: none;
-    }
-
-option {
-    background-color: #E8D8C4;
-    color: #333;
-    padding: 10px;
-}
-
-    option:hover {
-        background-color: #E8D8C4;
-    }
 
 /* for responsive, mobile size */
-/*@media (max-width: 600px) {
+/* -------------------------------
+   FULL RESPONSIVENESS FIX
+--------------------------------*/
+
+/* Small phones (max 576px) */
+@media (max-width: 576px) {
+
+    /* Header menu stack */
     header {
         flex-direction: column;
         text-align: center;
-    }*/
-    /* for menu list */
-    /*nav ul {
-        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: row;
+        padding: 0;
         margin-top: 10px;
     }
 
         nav ul li {
             margin: 10px 0;
-        }*/
-    /* for contact page */
-    /*.contacts {
-        padding: 25px;
-    }*/
-    /* for cards */
-    /*.cards {
-        display: grid;
-        gap: 20px;
-        margin-top: 30px;
-        grid-template-columns: repeat(1, 1fr);
-    }*/
-    /* for food slide show mobile size */
-    /*.slide {
-        flex-direction: column;
-        padding: 20px;
-        text-align: center;
-        margin-top: 5px;
-    }
-
-    .slide-img {
-        order: -1;
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-        .slide-img img {
-            width: 100%;
-            height: auto;
-            border-radius: 15px;
         }
+
+    /* Hero */
+    .hero {
+        height: 50vh;
+        padding: 0 15px;
+    }
+
+        .hero h1 {
+            font-size: 1.8rem;
+        }
+
+        .hero p {
+            font-size: 1rem;
+        }
+
+    .btn, .btn-primarybtn {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+
+    /* Slide section */
+    .slide {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
 
     .slide-text {
         padding: 0;
     }
 
-        .slide-text h2 {
-            font-size: 1.5rem;
-        }
-
-        .slide-text p {
-            font-size: 1rem;
-            line-height: 1.5;
-        }
-}*/
-
-/* only show 2 cards for tablet size */
-/*@media (min-width: 601px) and (max-width: 1024px) {
-    .cards {
-        display: grid;
-        gap: 20px;
-        margin-top: 30px;
-        grid-template-columns: repeat(2, 1fr);
+    .slide-img img {
+        width: 100%;
+        height: auto;
     }
-}*/
+
+    /* Special offer section */
+    .text-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .offer-list li {
+        font-size: 0.9rem;
+    }
+
+    /* Footer stack */
+    .footer-section .row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section img {
+        width: 140px;
+        height: auto;
+    }
+}
+
+
+/* Tablets (max 768px but bigger than phones) */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .slide {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .slide-img img {
+        width: 90%;
+    }
+
+    nav ul li {
+        margin-left: 12px;
+    }
+
+    .btn, .btn-primarybtn {
+        font-size: 1rem;
+        padding: 12px 22px;
+    }
+
+    .col-lg-6, .col-md-12 {
+        text-align: center;
+    }
+}
+
+
+/* Large tablets / small laptops (max 992px) */
+@media (max-width: 992px) {
+
+    header .logo {
+        font-size: 1.2rem;
+    }
+
+    .slide {
+        padding: 10px;
+    }
+
+    .slide-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .slide-text h3 {
+        font-size: 1.4rem;
+    }
+
+    .text-section h1 {
+        font-size: 2.2rem;
+    }
+}
+
+
 
 @media (min-width: 576px) {
     .col-sm {
@@ -1319,9 +1280,7 @@ option {
         max-width: 1300px;
     }
 }
-/* -------------------------------------------------
-   FORM + VALIDATION (Bootstrap compatible)
--------------------------------------------------- */
+
 
 /* Form container */
 .contacts {
