@@ -4,93 +4,7 @@
     <meta charset="UTF-8">
     <title>Order Coffee</title>
     <link rel="stylesheet" href="external.css">
-
-    <style>
-        .order-container {
-            display: flex;
-            gap: 40px;
-            margin-top: 40px;
-            align-items: flex-start;
-        }
-
-        .order-left img {
-            width: 320px;
-            border-radius: 15px;
-            box-shadow: 0px 5px 20px rgba(0,0,0,0.15);
-        }
-
-        .order-right {
-            flex: 1;
-        }
-
-            .order-right h2 {
-                color: var(--brown);
-                margin-bottom: 10px;
-            }
-        .order-details {
-            flex: 1;
-        }
-
-        .coffee-desc {
-            margin-bottom: 10px;
-            color: var(--brown);
-        }
-
-        .price {
-            color: var(--brown);
-            margin-bottom: 25px;
-        }
-
-        .option-block {
-            margin-bottom: 20px;
-        }
-
-        .radio-row {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-            .radio-row input {
-                display: none;
-            }
-
-            .radio-row label {
-                padding: 6px 14px;
-                background: var(--lightBrown);
-                border-radius: 50px;
-                cursor: pointer;
-                transition: 0.2s;
-            }
-
-            .radio-row input:checked + label {
-                background: var(--brown);
-                color: white;
-            }
-
-        .checkbox-row {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .qty-controls {
-            display: flex;
-            gap: 15px;
-            align-items: center;
-        }
-
-            .qty-controls button {
-                padding: 6px 12px;
-                background: var(--brown);
-                color: white;
-                border: none;
-                border-radius: 6px;
-                cursor: pointer;
-            }
-
-        
-    </style>
+    <link rel="stylesheet" href="order.css">
 </head>
 
 <body>
@@ -246,47 +160,7 @@
         </div>
     </footer>
 
-    <script>
-        // Get values from URL
-        const params = new URLSearchParams(window.location.search);
-        const name = params.get("name");
-        const price = params.get("price");
-        const image = params.get("image");
-        const desc = params.get("desc");
-
-        // Insert into the page
-        document.getElementById("coffeeName").textContent = name;
-        document.getElementById("coffeePrice").textContent = "€" + price;
-        document.getElementById("coffeeImage").src = image;
-        document.getElementById("coffeeDesc").textContent = desc;
-
-
-        function updatePrice() {
-            let basePrice = parseFloat(document.querySelector("input[name='size']:checked").value);
-            let toppings = document.querySelectorAll(".top:checked").length * 0.5;
-            let qty = parseInt(document.getElementById("qty").innerText);
-            let total = (basePrice + toppings) * qty;
-            document.getElementById("coffeePrice").innerText = total.toFixed(2);
-        }
-
-
-        document.querySelectorAll("input").forEach(el => {
-            el.addEventListener("change", updatePrice);
-        });
-
-
-        function changeQty(num) {
-            let qty = parseInt(document.getElementById("qty").innerText);
-            qty = Math.max(1, qty + num);
-            document.getElementById("qty").innerText = qty;
-            updatePrice();
-        }
-
-        function placeOrder() {
-            alert('Please pick up your order in 10 minutes.');
-        }
-    </script>
-
+    <script src="order.js"></script>
 
 </body>
 </html>

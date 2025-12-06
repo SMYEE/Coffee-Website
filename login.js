@@ -1,6 +1,6 @@
 // JavaScript source code
 
-// --- LOGIN FORM ---
+// for login page
 const loginForm = document.querySelector(".btn-login");
 if (loginForm) {
     loginForm.addEventListener("click", function (e) {
@@ -34,7 +34,7 @@ if (loginForm) {
     });
 }
 
-// --- SIGNUP FORM ---
+// for sign up page
 const signupBtn = document.querySelector(".btn-signup");
 if (signupBtn) {
     signupBtn.addEventListener("click", function (e) {
