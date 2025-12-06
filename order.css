@@ -93,7 +93,7 @@
 
     /* Page container */
     .order-container {
-        flex-direction: row;
+        flex-direction: column;
         gap: 20px;
         padding: 0 10px;
     }
@@ -170,7 +170,7 @@
 @media (max-width: 768px) {
 
     .order-container {
-        flex-direction: row;
+        flex-direction: column;
         gap: 25px;
     }
 
@@ -207,5 +207,6 @@
         max-width: 350px;
     }
 }
+
 
 
