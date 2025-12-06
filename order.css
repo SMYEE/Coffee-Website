@@ -170,7 +170,7 @@
 @media (max-width: 768px) {
 
     .order-container {
-        flex-direction: column;
+        flex-direction: row;
         gap: 25px;
     }
 
@@ -207,4 +207,5 @@
         max-width: 350px;
     }
 }
+
 
